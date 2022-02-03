@@ -42,15 +42,15 @@ class InstallerTranslationQueryTest extends InstallerTestBase {
 
     // Check the language direction.
     $direction = current($this->xpath('/@dir'))->getText();
-    $this->assertEqual('ltr', $direction);
+    $this->assertEquals('ltr', $direction);
   }
 
   /**
    * {@inheritdoc}
    */
   protected function setUpLanguage() {
-    // The language was was preset by passing a query parameter in the URL, so
-    // no explicit language selection is necessary.
+    // The language was preset by passing a query parameter in the URL, so no
+    // explicit language selection is necessary.
   }
 
   /**
@@ -62,8 +62,8 @@ class InstallerTranslationQueryTest extends InstallerTestBase {
 
     // Verify German was configured but not English.
     $this->drupalGet('admin/config/regional/language');
-    $this->assertText('German');
-    $this->assertNoText('English');
+    $this->assertSession()->pageTextContains('German');
+    $this->assertSession()->pageTextNotContains('English');
   }
 
   /**
