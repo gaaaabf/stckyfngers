@@ -1,0 +1,7 @@
+dl-horizontal:
+  css:
+    layout:
+      css/layout/dl-horizontal.css: {}
+prettify:
+  js:
+    //cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js: { type: external, attributes: { async: true } }

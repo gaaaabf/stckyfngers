@@ -1,0 +1,82 @@
+light_saml_idp.login:
+  path: /light_saml_idp/login
+  defaults:
+    _controller: light_saml_idp.controller.lightSamlIdp:login
+  options:
+    _maintenance_access: TRUE
+  requirements:
+    '_user_is_logged_in': 'TRUE'
+
+light_saml_idp.logout:
+  path: /light_saml_idp/logout
+  defaults:
+    _controller: light_saml_idp.controller.lightSamlIdp:logout
+  requirements:
+    '_user_is_logged_in': 'TRUE'
+
+light_saml_idp.admin:
+  path: /admin/config/people/light_saml_idp
+  defaults:
+    _title: 'SAML Idp'
+    _form: '\Drupal\light_saml_idp\Form\LightSAMLIdpConfigForm'
+  requirements:
+    _permission: 'administer site configuration'
+
+light_saml_idp.metadata:
+  path: 'admin/config/people/light_saml_idp/metadata'
+  defaults:
+    _title: 'SAML Idp Metadata'
+    _controller: light_saml_idp.controller.lightSamlIdp:adminMetaData
+  requirements:
+    _permission: 'administer site configuration'
+
+light_saml_idp.metadata_xml:
+  path: 'light_saml_idp/metadata'
+  defaults:
+    _controller: light_saml_idp.controller.lightSamlIdp:metaData
+    _disable_route_normalizer: 'TRUE'
+  requirements:
+    _access: 'TRUE'
+
+entity.serviceProvider.collection:
+  path: '/admin/config/people/light_saml_idp/serviceProvider'
+  defaults:
+    _entity_list: 'serviceProvider'
+    _title: 'Service providers'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.serviceProvider.addForm:
+  path: 'admin/config/people/light_saml_idp/serviceProvider/add'
+  defaults:
+    _entity_form: 'serviceProvider.add'
+    _title: 'Add Service Provider'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.serviceProvider.editForm:
+  path: 'admin/config/people/light_saml_idp/serviceProvider/edit/{serviceProvider}'
+  defaults:
+    _entity_form: 'serviceProvider.edit'
+    _title: 'Edit Service Provider'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.serviceProvider.deleteForm:
+  path: 'admin/config/people/light_saml_idp/serviceProvider/delete/{serviceProvider}'
+  defaults:
+    _entity_form: 'serviceProvider.delete'
+    _title: 'Delete Service Provider'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.serviceProvider.sso:
+  path: 'light_saml_idp/serviceProvider/{serviceProvider}/login'
+  defaults:
+    _controller: light_saml_idp.controller.lightSamlIdp:initiateLoginOnSP
+  requirements:
+    '_user_is_logged_in': 'TRUE'
+  options:
+    parameters:
+      serviceProvider:
+        type: entity:serviceProvider

@@ -1,0 +1,5 @@
+entity.serviceProvider.addForm:
+  route_name: entity.serviceProvider.addForm
+  title: 'Add Service Provider'
+  appears_on:
+    - entity.serviceProvider.collection

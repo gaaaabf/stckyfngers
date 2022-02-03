@@ -1,0 +1,17 @@
+{
+    "name": "stefanprintezis/light-saml-idp",
+    "description": "SAML Identity provider Drupal 8",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Stefan Printezis",
+            "email": "i@stefanprintezis.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "lightsaml/lightsaml": "^1.4"
+    },
+    "minimum-stability": "dev"
+}

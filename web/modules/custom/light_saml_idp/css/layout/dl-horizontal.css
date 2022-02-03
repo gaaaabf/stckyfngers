@@ -1,0 +1,12 @@
+.dl-horizontal {
+    display: grid;
+    grid-template-columns: max-content auto;
+}
+
+.dl-horizontal dt {
+    grid-column-start: 1;
+}
+
+.dl-horizontal dd {
+    grid-column-start: 2;
+}

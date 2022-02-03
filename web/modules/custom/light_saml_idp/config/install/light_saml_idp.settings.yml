@@ -1,0 +1,16 @@
+contact:
+  technical:
+    name: ''
+    email: ''
+  support:
+    name: ''
+    email: ''
+organization:
+  name: ''
+  display_name: ''
+  url: ''
+security:
+  signing:
+    key_location: ''
+    cert_location: ''
+entity_id: ''

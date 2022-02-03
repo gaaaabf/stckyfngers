@@ -1,0 +1,9 @@
+name: 'Light Saml Identity Provider'
+description: ''
+type: module
+core_version_requirement: ^8.8.0 || ^9
+
+# Information added by Drupal.org packaging script on 2021-09-06
+version: '8.x-1.0-alpha1'
+project: 'light_saml_idp'
+datestamp: 1630917224

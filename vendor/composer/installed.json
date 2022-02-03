@@ -1678,6 +1678,67 @@
         }
     },
     {
+        "name": "drupal/light_saml_idp",
+        "version": "1.0.0-alpha1",
+        "version_normalized": "1.0.0.0-alpha1",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/light_saml_idp.git",
+            "reference": "8.x-1.0-alpha1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/light_saml_idp-8.x-1.0-alpha1.zip",
+            "reference": "8.x-1.0-alpha1",
+            "shasum": "3c4d7778e949b2cdef2180eb5314cf24afad493a"
+        },
+        "require": {
+            "drupal/core": "^8.8.0 || ^9",
+            "lightsaml/lightsaml": "^1.4"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "drupal": {
+                "version": "8.x-1.0-alpha1",
+                "datestamp": "1630917221",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Project has not opted into security advisory coverage!"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Stefan Printezis",
+                "homepage": "https://www.drupal.org/user/180296",
+                "email": "i@stefanprintezis.nl",
+                "role": "Developer"
+            },
+            {
+                "name": "MrHaroldA",
+                "homepage": "https://www.drupal.org/user/168440"
+            },
+            {
+                "name": "StefanPr",
+                "homepage": "https://www.drupal.org/user/2812983"
+            },
+            {
+                "name": "ralphvdhoudt",
+                "homepage": "https://www.drupal.org/user/1210930"
+            }
+        ],
+        "description": "SAML Identity provider Drupal 8",
+        "homepage": "https://www.drupal.org/project/light_saml_idp",
+        "support": {
+            "source": "https://git.drupalcode.org/project/light_saml_idp"
+        }
+    },
+    {
         "name": "drupal/samlauth",
         "version": "3.4.0",
         "version_normalized": "3.4.0.0",
@@ -2717,6 +2778,70 @@
                 "url": "https://github.com/philipobenito",
                 "type": "github"
             }
+        ]
+    },
+    {
+        "name": "lightsaml/lightsaml",
+        "version": "1.4.1",
+        "version_normalized": "1.4.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/lightSAML/lightSAML.git",
+            "reference": "377f04d1fb25f2fb2e72dabeff10b336f1cbe4c5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/lightSAML/lightSAML/zipball/377f04d1fb25f2fb2e72dabeff10b336f1cbe4c5",
+            "reference": "377f04d1fb25f2fb2e72dabeff10b336f1cbe4c5",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6",
+            "robrichards/xmlseclibs": "~2.0|~3.0|~4.0",
+            "symfony/event-dispatcher": "~2.3|~3.0|~4.0",
+            "symfony/http-foundation": "~2.3|~3.0|~4.0"
+        },
+        "require-dev": {
+            "monolog/monolog": "~1.3",
+            "phpunit/phpunit": ">=5.7",
+            "pimple/pimple": "~3.0",
+            "symfony/css-selector": "~2.3|~3.0|~4.0",
+            "symfony/dom-crawler": "~2.3|~3.0|~4.0"
+        },
+        "suggest": {
+            "lightsaml/sp-bundle": "Symfony 2 SP security bundle",
+            "lightsaml/symfony-bridge": "Symfony 2 build container bridge"
+        },
+        "time": "2018-05-28T11:21:22+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "LightSaml\\": "src/",
+                "LightSaml\\Tests\\": "tests/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Milos Tomic",
+                "email": "tmilos@gmail.com",
+                "homepage": "https://github.com/tmilos/",
+                "role": "Developer"
+            }
+        ],
+        "description": "Light SAML 2.0 PHP library",
+        "homepage": "https://www.lightsaml.com/",
+        "keywords": [
+            "SAML 2.0",
+            "Single Logout",
+            "Single SignOn",
+            "library",
+            "lightSAML",
+            "php"
         ]
     },
     {
