@@ -1,0 +1,5 @@
+name: 'Code Deploy Connector'
+type: module
+description: 'Module will detect code deploy and run certain git functions'
+core_version_requirement: ^8.8.0 || ^9.0
+package: 'Custom'

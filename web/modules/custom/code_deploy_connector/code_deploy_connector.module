@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains code_deploy_connector.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function code_deploy_connector_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the code_deploy_connector module.
+    case 'help.page.code_deploy_connector':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module will detect code deploy and run certain git functions') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function code_deploy_connector_wysiwyg_editor_settings_alter(&$settings, $context) {
+    if ($context['profile']->editor == 'ckeditor') {
+        $settings['extraAllowedContent'] = array(
+            'a[download,type,length,href]',
+            'span;ul;li;table;tr;td;style;*[id];*(*);*{*}'
+        );
+    }
+}

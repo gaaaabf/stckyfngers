@@ -1,0 +1,12 @@
+code_deploy_connector.code_deploy_config_form:
+  title: 'Code Deploy Config Form'
+  route_name: code_deploy_connector.code_deploy_config_form
+  description: 'A description for the menu entry'
+  parent: system.admin_config_system
+  weight: 99
+code_deploy_connector.git_log:
+  title: 'Git Log List'
+  parent: system.admin_reports
+  description: 'View the git logs'
+  route_name: code_deploy_connector.check_log
+  weight: 99
