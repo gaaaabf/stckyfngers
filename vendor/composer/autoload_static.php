@@ -499,17 +499,6 @@ class ComposerStaticInit37cae295153a716b8e1426a443f6207c
                 0 => __DIR__ . '/..' . '/stack/builder/src',
             ),
         ),
-        'L' => 
-        array (
-            'LightSaml\\Tests\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/lightsaml/lightsaml/tests',
-            ),
-            'LightSaml\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/lightsaml/lightsaml/src',
-            ),
-        ),
         'D' => 
         array (
             'Dflydev\\DotAccessData' => 
