@@ -77,7 +77,7 @@ class CodeDeployConfigForm extends ConfigFormBase {
     for ($i = 0; $i < $num_webhook; $i++) {
       $trigger_path = \Drupal::request()->getHost();
       if (!empty($config->get('webhooks')[$i]['url_trigger'])) {
-        $trigger_path = \Drupal::request()->getHost() . '/web/hook/' . $config->get('webhooks')[$i]['url_trigger'];
+        $trigger_path = \Drupal::request()->getHost() . '/webhook/' . $config->get('webhooks')[$i]['url_trigger'];
       } 
 
       $form['webhook_fieldset']['web_hook'][$i]['url_trigger'] = [
