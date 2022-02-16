@@ -92,7 +92,6 @@ class ComposerStaticInit37cae295153a716b8e1426a443f6207c
         'R' => 
         array (
             'Robo\\' => 5,
-            'RobRichards\\XMLSecLibs\\' => 23,
         ),
         'P' => 
         array (
@@ -102,10 +101,6 @@ class ComposerStaticInit37cae295153a716b8e1426a443f6207c
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
             'PhpParser\\' => 10,
-        ),
-        'O' => 
-        array (
-            'OneLogin\\' => 9,
         ),
         'M' => 
         array (
@@ -313,10 +308,6 @@ class ComposerStaticInit37cae295153a716b8e1426a443f6207c
         array (
             0 => __DIR__ . '/..' . '/consolidation/robo/src',
         ),
-        'RobRichards\\XMLSecLibs\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/robrichards/xmlseclibs/src',
-        ),
         'Psy\\' => 
         array (
             0 => __DIR__ . '/..' . '/psy/psysh/src',
@@ -341,10 +332,6 @@ class ComposerStaticInit37cae295153a716b8e1426a443f6207c
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
-        ),
-        'OneLogin\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/onelogin/php-saml/src',
         ),
         'Masterminds\\' => 
         array (
@@ -528,6 +515,7 @@ class ComposerStaticInit37cae295153a716b8e1426a443f6207c
 
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Drupal' => __DIR__ . '/../..' . '/web/core/lib/Drupal.php',
         'DrupalFinder\\DrupalFinder' => __DIR__ . '/..' . '/webflo/drupal-finder/src/DrupalFinder.php',
         'Drupal\\Component\\DependencyInjection\\Container' => __DIR__ . '/../..' . '/web/core/lib/Drupal/Component/DependencyInjection/Container.php',

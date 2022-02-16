@@ -36,7 +36,6 @@ module:
   path_alias: 0
   quickedit: 0
   rdf: 0
-  samlauth: 0
   search: 0
   shortcut: 0
   system: 0
@@ -47,7 +46,6 @@ module:
   update: 0
   user: 0
   views_ui: 0
-  externalauth: 10
   views: 10
   standard: 1000
 theme:

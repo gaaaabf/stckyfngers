@@ -20,7 +20,6 @@
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-project-message": "^9.1",
         "drupal/core-recommended": "^9.1",
-        "drupal/samlauth": "^3.4",
         "drush/drush": "^10.6"
     },
     "conflict": {
@@ -29,7 +28,12 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true
+        }
     },
     "extra": {
         "drupal-scaffold": {
