@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'b3f5734f70cf578b7ed7f0d7a00e10ba77abc234',
+        'reference' => '4217cae42330a300dcf1954342cad835c878e1b0',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -748,7 +748,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'b3f5734f70cf578b7ed7f0d7a00e10ba77abc234',
+            'reference' => '4217cae42330a300dcf1954342cad835c878e1b0',
             'dev_requirement' => false,
         ),
         'drupal/responsive_image' => array(
@@ -966,6 +966,15 @@
             'aliases' => array(),
             'reference' => '1afdd860a2566ed3c2b0b4a3de6e23434a79ec85',
             'dev_requirement' => false,
+        ),
+        'kint-php/kint' => array(
+            'pretty_version' => '4.1.1',
+            'version' => '4.1.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../kint-php/kint',
+            'aliases' => array(),
+            'reference' => 'e64b939f9ceb9620abd982e2a66a3289fcf4e837',
+            'dev_requirement' => true,
         ),
         'laminas/laminas-diactoros' => array(
             'pretty_version' => '2.8.0',
