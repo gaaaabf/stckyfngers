@@ -45,7 +45,7 @@ class CodeDeployConnectorController extends ControllerBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('config.factory'),
+      $container->get('config.factory')
     );
   }
 
