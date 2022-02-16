@@ -22,9 +22,12 @@
 # sites/*/services*.yml
 
 # Ignore paths that contain user-generated content.
-sites/*/files/
+sites/*/files/css
+sites/*/files/js
+sites/*/files/php
+sites/*/files/styles
+sites/*/files/.htaccess
 sites/*/private/
-!sites/*/files/config_acqTmp-2022-02-03T10.20.35-8938/staging/
 
 # Ignore SimpleTest multi-site environment.
 # sites/simpletest

@@ -1,0 +1,20 @@
+_core:
+  default_config_hash: V63WW0oKJkzRmrTEvo9p3pAmrVK5iiJ6d1GGF2oOff0
+code_deploy_connector: null
+webhook_trigger: ''
+webhooks:
+  0:
+    url_trigger: getpull
+    command: 'git pull --force origin master'
+    status: 1
+    auth: 0
+    method: GET
+  1:
+    url_trigger: postpull
+    command: 'git pull --force origin master'
+    status: 1
+    auth: 0
+    method: POST
+  actions:
+    add_trigger: 'Add one more'
+    remove_trigger: 'Remove one'
