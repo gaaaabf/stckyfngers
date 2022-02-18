@@ -8,6 +8,7 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  chatroom: 0
   ckeditor: 0
   code_deploy_connector: 0
   color: 0
@@ -51,4 +52,7 @@ module:
 theme:
   bartik: 0
   seven: 0
+  stable: 0
+  classy: 0
+  bootstrap5: 0
 profile: standard
