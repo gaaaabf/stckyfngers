@@ -1,0 +1,7 @@
+custom_core.top:
+  path: '/top'
+  defaults:
+    _controller: '\Drupal\custom_core\Controller\PageController::topPage'
+    _title: 'StckyFngr'
+  requirements:
+    _permission: 'access content'

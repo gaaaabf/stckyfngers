@@ -1,0 +1,22 @@
+uuid: 56bf701f-d9d5-4a34-a607-7637c3dc3f6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - c_bootstrap5
+_core:
+  default_config_hash: 9LdMj38y4GDi23GrIUtIZIV1bJEn1C47N19jrswvcLc
+id: c_bootstrap5_messages
+theme: c_bootstrap5
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

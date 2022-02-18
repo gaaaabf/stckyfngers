@@ -1,0 +1,5 @@
+name: 'Custom Core Module'
+type: module
+description: 'Routes, Views, Controllers, Models will be initialized here'
+core_version_requirement: ^8.8.0 || ^9.0
+package: 'Custom'

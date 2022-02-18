@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_core.module.
+ */
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implementing hook_theme().
+ */
+function custom_core_theme($existing, $type, $theme, $path) {
+
+  return [
+  	'top_page' => [
+  		'variables' => ['items' => []],
+  	],
+  ];
+}

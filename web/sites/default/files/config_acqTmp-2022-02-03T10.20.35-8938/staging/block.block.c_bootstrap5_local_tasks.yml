@@ -1,0 +1,22 @@
+uuid: 2189cfd8-f609-43d4-928b-292bf3897769
+langcode: en
+status: true
+dependencies:
+  theme:
+    - c_bootstrap5
+_core:
+  default_config_hash: yX9o6NcntZnXRDfbJoHY1pJwuXlumW44m5AMs347NN4
+id: c_bootstrap5_local_tasks
+theme: c_bootstrap5
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

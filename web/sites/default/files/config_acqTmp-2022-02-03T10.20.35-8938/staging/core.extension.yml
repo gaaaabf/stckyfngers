@@ -16,6 +16,7 @@ module:
   config: 0
   contact: 0
   contextual: 0
+  custom_core: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
@@ -55,4 +56,5 @@ theme:
   stable: 0
   classy: 0
   bootstrap5: 0
+  c_bootstrap5: 0
 profile: standard

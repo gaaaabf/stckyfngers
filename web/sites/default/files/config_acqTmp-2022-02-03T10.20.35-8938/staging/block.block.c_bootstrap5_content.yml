@@ -1,0 +1,22 @@
+uuid: 3d5ee0ad-b452-4768-a3de-a9085dbf3c2a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - c_bootstrap5
+_core:
+  default_config_hash: 1o0W13wt232YmsDYiRA5xtlFq0L2WNS7FmIVbBeuhIY
+id: c_bootstrap5_content
+theme: c_bootstrap5
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }
