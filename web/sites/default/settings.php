@@ -784,7 +784,7 @@ $databases['default']['default'] = array(
     'driver' => 'mysql',
     'database' => 'rabbytec_drupal',
     'username' => 'rabbytec_drupal',
-    'password' => 'F3rnandeZG@b96',
+    'password' => 'welcome',
     'host' => '127.0.0.1',
     'port' => 3306 );
 
