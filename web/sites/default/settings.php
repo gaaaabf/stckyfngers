@@ -782,8 +782,8 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 
 $databases['default']['default'] = array(
     'driver' => 'mysql',
-    'database' => 'rabbytec_wp843',
-    'username' => 'rabbytec',
+    'database' => 'rabbytec_drupal',
+    'username' => 'rabbytec_drupal',
     'password' => 'F3rnandeZG@b96',
     'host' => '127.0.0.1',
     'port' => 3306 );
