@@ -15,5 +15,8 @@ function custom_core_theme($existing, $type, $theme, $path) {
   	'top_page' => [
   		'variables' => ['items' => []],
   	],
+    'artists_page' => [
+      'variables' => ['items' => []],
+    ]
   ];
 }

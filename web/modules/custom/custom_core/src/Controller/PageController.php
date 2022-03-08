@@ -20,5 +20,15 @@ class PageController extends ControllerBase {
       '#theme' => 'top_page',
       '#items' => $items,
     );
+  }
+
+  public function artistsPage(Request $request) {
+
+    $items = ['artist1', 'artist2', 'artist3'];
+
+    return array(
+      '#theme' => 'artists_page',
+      '#items' => $items,
+    );
   }  
 }

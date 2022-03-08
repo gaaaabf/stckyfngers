@@ -2,7 +2,11 @@ name: C-Bootstrap5
 type: theme
 description: 'Sub theme with Bootstrap 5 css library'
 core_version_requirement: ^8.9 || ^9
-base theme: bootstrap5
+base theme: false
+libraries:
+  - c_bootstrap5/c_bootstrap5-js-latest
+  - c_bootstrap5/global-styling
+  - c_bootstrap5/drupal.nav-tabs
 regions:
   header: Header
   nav_branding: 'Navigation branding region'

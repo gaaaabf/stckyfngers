@@ -5,3 +5,11 @@ custom_core.top:
     _title: 'StckyFngr'
   requirements:
     _permission: 'access content'
+
+custom_core.artists:
+  path: '/artists'
+  defaults:
+    _controller: '\Drupal\custom_core\Controller\PageController::artistsPage'
+    _title: 'Artists'
+  requirements:
+    _permission: 'access content'
