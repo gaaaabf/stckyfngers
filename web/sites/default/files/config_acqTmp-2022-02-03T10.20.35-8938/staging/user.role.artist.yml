@@ -1,0 +1,9 @@
+uuid: 5a76607a-43c9-436f-ab02-1d971904d26e
+langcode: en
+status: true
+dependencies: {  }
+id: artist
+label: Artist
+weight: 3
+is_admin: null
+permissions: {  }
