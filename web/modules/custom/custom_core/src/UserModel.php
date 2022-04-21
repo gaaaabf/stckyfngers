@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\custom_core\Controller;
+namespace Drupal\custom_core;
 
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\Request;
@@ -8,18 +8,12 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Entity\EntityTypeManager;
-use Drupal\custom_core\UserModel;
 
-/**
- * Class PageController.
- */
-class PageController extends ControllerBase {
+class UserModel {
 
   protected $database;
 
   protected $entity_type_manager;
-
-  protected $user_model;
 
   /**
    * {@inheritdoc}
@@ -27,7 +21,6 @@ class PageController extends ControllerBase {
   public function __construct(Connection $database, EntityTypeManager $entity_type_manager) {
     $this->database = $database;
     $this->entity_type_manager = $entity_type_manager;
-    $this->user_model = new UserModel($database, $entity_type_manager);
   }
 
   /**
@@ -43,28 +36,7 @@ class PageController extends ControllerBase {
   /**
    * {@inheritdoc}
    */
-  public function topPage(Request $request) {
-
-    $items = ['1', '2', '3'];
-
-    return array(
-      '#theme' => 'top_page',
-      '#items' => $items,
-    );
+  public function fetchArtists() {
+    
   }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function artistsPage(Request $request) {
-
-    \Kint::dump($this->user_model);
-
-    $items = ['artist1', 'artist2', 'artist3'];
-
-    return array(
-      '#theme' => 'artists_page',
-      '#items' => $items,
-    );
-  }  
 }
