@@ -1,6 +1,6 @@
-Options +FollowSymLinks -MultiViews
+# Options +FollowSymLinks -MultiViews
 # Turn mod_rewrite on
-RewriteEngine On
-RewriteBase /
+# RewriteEngine On
+# RewriteBase /
 
-RewriteRule ^(.*)$ /web/$1 [L,NC]
+# RewriteRule ^(.*)$ /web/$1 [L,NC]
