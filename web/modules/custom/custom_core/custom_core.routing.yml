@@ -13,3 +13,11 @@ custom_core.artists:
     _title: 'Artists'
   requirements:
     _permission: 'access content'
+
+custom_core.artists_registration:
+  path: '/artists/register'
+  defaults:
+    _form: '\Drupal\custom_core\Form\ArtistsRegistration'
+    _title: 'Artists Register'
+  requirements:
+    _permission: 'access content'
