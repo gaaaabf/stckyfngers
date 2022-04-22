@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\custom_core;
+namespace Drupal\custom_core\Service;
 
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\Request;
@@ -14,6 +14,8 @@ class UserModel {
   protected $database;
 
   protected $entity_type_manager;
+
+  protected $user_table = 'users_field_data';
 
   /**
    * {@inheritdoc}
@@ -37,6 +39,9 @@ class UserModel {
    * {@inheritdoc}
    */
   public function fetchArtists() {
-    
+    $this->database->select($this->user_table, 'user');
+    $this->database->addField('user', '');
+
+    \Kint::dump($this->database);
   }
 }
