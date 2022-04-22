@@ -1,4 +1,10 @@
 services:
+  custom_core.user_model:
+    class: Drupal\custom_core\Service\UserModel
+    arguments:
+      - '@database'
+      - '@entity_type.manager'
+
   custom_core.route_subscriber:
     class: Drupal\custom_core\Routing\RouteSubscriber
     tags:
