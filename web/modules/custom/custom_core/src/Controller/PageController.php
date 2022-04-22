@@ -64,17 +64,22 @@ class PageController extends ControllerBase {
    * {@inheritdoc}
    */
   public function artistsPage(Request $request) {
+
+    // Get Page
     $page = $request->query->get('page');
+
+    // Set pager configurations
     $this->pager->setPage($page);
-    $this->pager->setItemsPerPage(1);
-    // $this->pager->setTotalDisplayPagers(5);
+    $this->pager->setItemsPerPage(12);
 
-    $pager_results = $this->pager->getOffsetLimit();
-    $data = $this->user_model->fetchArtists($pager_results['offset'], $pager_results['limit']);
-    $total_data = $this->user_model->fetchTotalArtists();
+    // Get offset and limit to query data
+    $offset_limit = $this->pager->getOffsetLimit();
 
-    $this->pager->setTotalItemCount($total_data);
-    $this->pager->setTotalPages();
+    // Fetch artists
+    $data = $this->user_model->fetchArtists($offset_limit['offset'], $offset_limit['limit']);
+
+    // Fetch pagination to be rendered
+    $this->pager->setTotalPages($this->user_model->fetchTotalArtists());
     $pager_links = $this->pager->getPagerLinks();
 
     return array(

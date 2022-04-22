@@ -17,13 +17,6 @@ class PagerService {
   protected $one_step;
 
   /**
-   * {@inheritdoc}
-   */
-  public function __construct() {
-
-  }
-
-  /**
    * Set the page
    */
   public function setPage($page = 1) {
@@ -50,8 +43,11 @@ class PagerService {
   /**
    * Set the total paginations needed
    */
-  public function setTotalPages() {
-    $this->total_pages = ceil($this->total_item_count / $this->items_per_page);
+  public function setTotalPages($total_item_count = NULL) {
+    if (empty($total_item_count)) {
+      $total_item_count = $this->total_item_count;
+    }
+    $this->total_pages = ceil($total_item_count / $this->items_per_page);
   }
 
   /**

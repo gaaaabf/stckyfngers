@@ -1,0 +1,7 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    {% for pager in pagers %}
+      <li class="page-item"><a class="page-link" href="{{ pager['link_url'] }}">{{ pager['link_no'] }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
