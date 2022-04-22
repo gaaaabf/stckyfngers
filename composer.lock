@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "998403eafa2c2480685b5de91906338a",
+    "content-hash": "eaff52db8fc3a60d93c19c5de068c309",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6926,14 +6926,41 @@
                 "source": "https://github.com/kint-php/kint/tree/4.1.1"
             },
             "time": "2022-01-02T10:30:48+00:00"
+        },
+        {
+            "name": "rbf/twig_kint",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gaaaabf/twig_kint.git",
+                "reference": "131e2a63970e71d01311b8b74d3fe63ed1f9704e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gaaaabf/twig_kint/zipball/131e2a63970e71d01311b8b74d3fe63ed1f9704e",
+                "reference": "131e2a63970e71d01311b8b74d3fe63ed1f9704e",
+                "shasum": ""
+            },
+            "require": {
+                "kint-php/kint": "^4.1"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Provides kint functionality on twig",
+            "time": "2022-02-22T05:47:18+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "rbf/twig_kint": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "1.1.0"
 }

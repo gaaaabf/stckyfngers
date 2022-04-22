@@ -95,6 +95,7 @@
         }
     },
     "require-dev": {
-        "kint-php/kint": "^4.1"
+        "kint-php/kint": "^4.1",
+        "rbf/twig_kint": "dev-master"
     }
 }
