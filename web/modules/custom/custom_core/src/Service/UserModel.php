@@ -52,17 +52,36 @@ class UserModel {
   /**
    * Fetches all user entity objects with 'Artist' as Role
    */
-  public function fetchArtists() {
+  public function fetchArtists($start = 0, $limit = 10) {
     $results = NULL;
     $uids = NULL;
 
     $query = $this->entity_type_manager_user->getQuery();
     $query->condition('roles', ARTIST_ROLE);
+    $query->range($start, $limit);
 
     $uids = $query->execute();
 
     if (!empty($uids)) {
       $results = $this->entity_type_manager_user->loadMultiple($uids);
+    }
+
+    return $results;
+  }
+
+  /**
+   * Fetches all user entity objects with 'Artist' as Role
+   */
+  public function fetchTotalArtists() {
+    $results = NULL;
+    $uids = NULL;
+
+    $query = $this->entity_type_manager_user->getQuery();
+    $query->condition('roles', ARTIST_ROLE);
+    $uids = $query->execute();
+
+    if (!empty($uids)) {
+      $results = count($uids);
     }
 
     return $results;

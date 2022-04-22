@@ -16,7 +16,10 @@ function custom_core_theme($existing, $type, $theme, $path) {
   		'variables' => ['data' => []],
   	],
     'artists_page' => [
-      'variables' => ['data' => []],
+      'variables' => [
+        'data' => [],
+        'pagers' => []
+      ],
     ]
   ];
 }
