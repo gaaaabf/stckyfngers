@@ -46,11 +46,11 @@ class PageController extends ControllerBase {
    */
   public function topPage(Request $request) {
 
-    $items = ['1', '2', '3'];
+    $data = ['1', '2', '3'];
 
     return array(
       '#theme' => 'top_page',
-      '#items' => $items,
+      '#data' => $data,
     );
   }
 
@@ -59,13 +59,11 @@ class PageController extends ControllerBase {
    */
   public function artistsPage(Request $request) {
 
-    $this->user_model->fetchArtists();
-
-    $items = ['artist1', 'artist2', 'artist3'];
+    $data = $this->user_model->fetchArtists();
 
     return array(
       '#theme' => 'artists_page',
-      '#items' => $items,
+      '#data' => $data,
     );
   }  
 }

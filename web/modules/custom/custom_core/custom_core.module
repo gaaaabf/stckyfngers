@@ -13,10 +13,10 @@ function custom_core_theme($existing, $type, $theme, $path) {
 
   return [
   	'top_page' => [
-  		'variables' => ['items' => []],
+  		'variables' => ['data' => []],
   	],
     'artists_page' => [
-      'variables' => ['items' => []],
+      'variables' => ['data' => []],
     ]
   ];
 }

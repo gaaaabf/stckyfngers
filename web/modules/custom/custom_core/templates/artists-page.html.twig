@@ -1,7 +1,19 @@
+<!-- section #1 page title  -->
 <div class="jumbotron mt-5 mb-5">
   <h1 class="display-4">ARTISTS</h1>
 </div>
+<!-- end section #1 page title  -->
 
-{% for item in items %}
-  {{ item }}
+<!-- section #2 artists cards  -->
+{% for item in data %}
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">
+        {{ item.field_first_name.value }}
+        {{ item.field_last_name.value }}
+      </p>
+    </div>
+  </div>
 {% endfor %}
+<!-- end section #2 artists cards  -->
