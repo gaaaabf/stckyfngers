@@ -12,9 +12,9 @@ class PagerService {
 
   protected $total_pages;
 
-  protected $total_display_pagers;
-
   protected $one_step;
+
+  protected $total_display_pagers = 5;
 
   /**
    * Set the page
@@ -81,15 +81,35 @@ class PagerService {
     $links = [];
     $page = $this->page;
 
+    // Build previous links
     for ($i = 1; $i != $this->total_pages + 1; $i++) {
-      $page_no = $i;
+      $page_no = $i + ($page - $this->total_display_pagers);
 
       $links[] = [
         'link_no' => $page_no,
         'link_url' => '?page=' . $page_no, 
       ];
 
-      // if ($this->total_item_count == $page_no) break;
+      if ($i == $this->total_display_pagers - 1) break;
+    }
+
+    // Build current link
+    $links[] = [
+      'link_no' => $page,
+      'link_url' => '?page=' . $page,
+      'active' => 'active', 
+    ];
+
+    // Build next links
+    for ($i = 1; $i != $this->total_pages + 1; $i++) {
+      $page_no = $i + $page;
+
+      $links[] = [
+        'link_no' => $page_no,
+        'link_url' => '?page=' . $page_no, 
+      ];
+
+      if ($i == $this->total_display_pagers) break;
     }
 
     return $links;

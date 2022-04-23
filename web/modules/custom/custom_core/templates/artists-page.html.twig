@@ -1,23 +1,30 @@
-<!-- section #1 page title  -->
-<div class="jumbotron mt-5 mb-5">
-  <h1 class="display-4">ARTISTS</h1>
-</div>
-<!-- end section #1 page title  -->
-
-<!-- section #2 artists cards  -->
-{% for item in data %}
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <p class="card-text">
-        {{ item.field_first_name.value }}
-        {{ item.field_last_name.value }}
-      </p>
-    </div>
+<div class="container">
+  <!-- section #1 page title  -->
+  <div class="jumbotron mt-5 mb-5">
+    <h1 class="display-4">ARTISTS</h1>
   </div>
-{% endfor %}
-<!-- end section #2 artists cards  -->
+  <!-- end section #1 page title  -->
 
-<!-- section #3 artists pager -->
-  {% include directory ~ '/templates/navigation/pager.html.twig' with pagers %}
-<!-- end section #3 artists pager -->
+  <!-- section #2 artists cards  -->
+  <div class="row">
+    {% for item in data %}
+      <div class="col-3 mt-5">
+        <div class="card text-truncate" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">
+              {{ item.id() }}
+              {{ item.field_first_name.value }}
+              {{ item.field_last_name.value }}
+            </p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <!-- end section #2 artists cards  -->
+
+  <!-- section #3 artists pager -->
+    {% include directory ~ '/templates/navigation/pager.html.twig' with pagers %}
+  <!-- end section #3 artists pager -->
+</div>
