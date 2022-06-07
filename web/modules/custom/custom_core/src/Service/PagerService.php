@@ -84,6 +84,7 @@ class PagerService {
     // Build previous links
     for ($i = 1; $i != $this->total_pages + 1; $i++) {
       $page_no = $i + ($page - $this->total_display_pagers);
+      if ($page_no <= 0) break;
 
       $links[] = [
         'link_no' => $page_no,
@@ -92,7 +93,7 @@ class PagerService {
 
       if ($i == $this->total_display_pagers - 1) break;
     }
-
+    
     // Build current link
     $links[] = [
       'link_no' => $page,

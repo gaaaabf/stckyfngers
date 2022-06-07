@@ -4,7 +4,6 @@ services:
     arguments:
       - '@database'
       - '@entity_type.manager'
-      - '@custom_core.pager_service'
 
   custom_core.pager_service:
     class: Drupal\custom_core\Service\PagerService

@@ -72,7 +72,7 @@ class UserModel {
   /**
    * Fetches all user entity objects with 'Artist' as Role
    */
-  public function fetchTotalArtists() {
+  public function countArtists() {
     $results = NULL;
     $uids = NULL;
 
