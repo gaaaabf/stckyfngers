@@ -10,7 +10,7 @@ use Drupal\Core\Database\Connection;
 use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\custom_core\Service\UserModel;
 use Drupal\custom_core\Service\PagerService;
-
+use Drupal\Core\Pager\PagerManagerInterface;
 
 /**
  * Class PageController.
@@ -23,16 +23,19 @@ class PageController extends ControllerBase {
 
   protected $user_model;
 
+  protected $paginator;
+
   protected $pager;
 
   /**
    * {@inheritdoc}
    */
-  public function __construct(Connection $database, EntityTypeManager $entity_type_manager, UserModel $user_model, PagerService $pager) {
+  public function __construct(Connection $database, EntityTypeManager $entity_type_manager, UserModel $user_model, PagerService $pager, PagerManagerInterface $paginator) {
     $this->database = $database;
     $this->entity_type_manager = $entity_type_manager;
     $this->user_model = $user_model;
     $this->pager = $pager;
+    $this->paginator = $paginator;
   }
 
   /**
@@ -44,6 +47,7 @@ class PageController extends ControllerBase {
       $container->get('entity_type.manager'),
       $container->get('custom_core.user_model'),
       $container->get('custom_core.pager_service'),
+      $container->get('pager.manager'),
     );
   }
 
@@ -82,10 +86,18 @@ class PageController extends ControllerBase {
     $this->pager->setTotalPages($this->user_model->fetchTotalArtists());
     $pager_links = $this->pager->getPagerLinks();
 
-    return array(
+    $this->paginator->createPager(100, 10);
+
+    $render[] = [
       '#theme' => 'artists_page',
       '#data' => $data,
       '#pagers' => $pager_links,
-    );
-  }  
+    ];
+
+    $render[] = [
+      '#type' => 'pager'
+    ];
+
+    return $render;
+  }
 }
