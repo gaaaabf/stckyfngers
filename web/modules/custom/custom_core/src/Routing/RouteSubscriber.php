@@ -14,9 +14,7 @@ class RouteSubscriber extends RouteSubscriberBase {
    * {@inheritdoc}
    */
   protected function alterRoutes(RouteCollection $collection) {
-    // if ($route = $collection->get('forum.index')) {
-    //   $route->setRequirement('_user_is_logged_in', 'TRUE');
-    // }
+    // Do someting
   }
 
 }

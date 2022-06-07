@@ -12,3 +12,9 @@ services:
     class: Drupal\custom_core\Routing\RouteSubscriber
     tags:
       - { name: event_subscriber }
+
+  custom_core.middleware:
+    class: Drupal\custom_core\Middleware
+    arguments: ['@config.factory']
+    tags:
+      - { name: http_middleware, priority: 150 }
