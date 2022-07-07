@@ -4,6 +4,10 @@ namespace Drupal\custom_core\Entity;
 
 use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\user\EntityOwnerTrait;
+use Drupal\user\EntityOwnerInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
 
 /**
  * Defines the artist entity.
@@ -15,6 +19,8 @@ use Drupal\Core\Entity\ContentEntityInterface;
  *   entity_keys = {
  *     "id" = "id",
  *     "uuid" = "uuid",
+ *     "owner" = "uid",
+ *     "uid" = "uid",
  *   },
  *   handlers = {
  *     "form" = {
@@ -35,12 +41,16 @@ use Drupal\Core\Entity\ContentEntityInterface;
  *   admin_permission = "administer site configuration",
  * )
  */
-class Artist extends ContentEntityBase implements ContentEntityInterface {
+class Artist extends ContentEntityBase implements ContentEntityInterface, EntityOwnerInterface {
+
+  use EntityOwnerTrait;
 
   /**
    * {@inheritdoc}
    */
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
+    $fields = parent::baseFieldDefinitions($entity_type);
+    $fields += static::ownerBaseFieldDefinitions($entity_type);
 
     $fields['uid']
       ->setLabel(t('Author'))
